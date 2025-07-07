@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Squares from "./Squares";
 import DotGrid from "./DotGrid";
 import Aurora from "./Aurora";
@@ -8,6 +8,20 @@ import Orb from "./Orb";
 export const Header = (props) => {
   // Switch between background types: 'squares', 'dots', 'aurora', 'beams', or 'orb'
   const backgroundType = 'orb';
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.getElementById('menu');
+      if (window.scrollY > 50) {
+        navbar?.classList.add('navbar-scrolled');
+      } else {
+        navbar?.classList.remove('navbar-scrolled');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const renderBackground = () => {
     if (backgroundType === 'dots') {
@@ -79,17 +93,26 @@ export const Header = (props) => {
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 intro-text">
+                <div className="top-title">Get to know your Company</div>
                 <h1>
                   {props.data ? props.data.title : "Loading"}
                   <span></span>
                 </h1>
                 <p>{props.data ? props.data.paragraph : "Loading"}</p>
-                <a
-                  href="#features"
-                  className="btn btn-custom btn-lg page-scroll"
-                >
-                  Learn More
-                </a>{" "}
+                <div className="button-container">
+                  <a
+                    href="#contact"
+                    className="btn-contact page-scroll"
+                  >
+                    Get in touch
+                  </a>
+                  <a
+                    href="#features"
+                    className="btn-explore page-scroll"
+                  >
+                    Explore Features
+                  </a>
+                </div>
               </div>
             </div>
           </div>
