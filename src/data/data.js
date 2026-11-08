@@ -1,4 +1,5 @@
-{
+/** Site copy and structure; JS module avoids strict JSON parse failures on small edit mistakes. */
+const siteData = {
   "Header": {
     "title": "Traize",
     "paragraph": "We are developing an intelligent operating system for enterprise knowledge, connecting talent, projects, and expertise to unlock your organization's full potential."
@@ -40,28 +41,31 @@
       "text": "Unleash unprecedented innovation and growth by transcending traditional organizational boundaries."
     }
   ],
-
   "Team": [
     {
       "img": "img/team/raphabw.jpeg",
       "name": "Raphael Sauer",
       "job": "Business Development & Co-Founder",
-      "description": "Raphael leads Traize's business strategy and partnerships. Drawing on a background in consulting and an MSc in Organization & Innovation from Copenhagen, he expertly bridges our advanced research with market needs. He focuses on strategic relationships with key partners and scaling our go-to-market initiatives, ensuring Traize's solutions deliver value to enterprises."  },
+      "description": "Raphael leads Traize's business strategy and partnerships. Drawing on a background in consulting and an MSc in Organization & Innovation from Copenhagen, he expertly bridges our advanced research with market needs. He focuses on strategic relationships with key partners and scaling our go-to-market initiatives, ensuring Traize's solutions deliver value to enterprises."
+    },
     {
       "img": "img/team/lukas.jpeg",
       "name": "Lukas Bierling",
       "job": "Research & Co-Founder",
-      "description": "Lukas leads our research initiatives and core engineering architecture. Currently, a MSc AI  student in Amsterdam he focuses on information retrieval and autonomous agents. With over four years of experience in Machine Learning Engineering and Research, he develops the foundational algorithms and infrastructure that power Traize's knowledge mapping capabilities. "   },
+      "description": "Lukas leads our research initiatives and core engineering architecture. Currently, a MSc AI  student in Amsterdam he focuses on information retrieval and autonomous agents. With over four years of experience in Machine Learning Engineering and Research, he develops the foundational algorithms and infrastructure that power Traize's knowledge mapping capabilities. "
+    },
     {
       "img": "img/team/adri.jpeg",
       "name": "Adrian Henkel",
       "job": "LLM Engineering & Co-Founder",
-      "description": "Adrian, with an MSc in Bioinformatics from TUM, is the architect of Traize's technical infrastructure. He is our lead LLM Engineer, implementing all relevant generative components and agentic AI workflows.  His expertise ensures the seamless integration and high performance of LLMs, transforming complex enterprise knowledge into intelligent insights at scale."  },
+      "description": "Adrian, with an MSc in Bioinformatics from TUM, is the architect of Traize's technical infrastructure. He is our lead LLM Engineer, implementing all relevant generative components and agentic AI workflows.  His expertise ensures the seamless integration and high performance of LLMs, transforming complex enterprise knowledge into intelligent insights at scale."
+    },
     {
       "img": "img/team/theobw.jpeg",
       "name": "Theo Rabe",
       "job": "Product Design & Co-Founder",
-      "description": "Theo is the driving force behind Traize's user experience and brand identity. With his dual background in business (B.Sc.) and the creative industries (M.A.), he builds the crucial bridge between business logic and intuitive design. He is responsible for translating the vision of Traize into a product and a brand that delight users, while simultaneously ensuring the company's economic success."
+      "description": "Theo is the driving force behind Traize's user experience and brand identity. With his dual background in business (B.Sc.) and the creative industries (M.A.), he builds the crucial bridge between business logic and intuitive design. He is responsible for translating the vision of Traize into a product and a brand that delight users, while simultaneously ensuring the company's economic success."
+    }
   ],
   "Contact": {
     "address": "Munich, Germany",
@@ -93,4 +97,6 @@
       "text": "Build scalable systems for internal mobility and targeted skill development."
     }
   ]
-}
+};
+
+export default siteData;

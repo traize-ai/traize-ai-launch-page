@@ -107,30 +107,41 @@ export const Header = (props) => {
       <div className="intro">
         {renderBackground()}
         <div className="overlay">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-8 col-md-offset-2 intro-text">
-                <div className="top-title">Intelligent Solutions for Enterprise Knowledge</div>
-                <h1>
-                  {props.data ? props.data.title : "Loading"}
-                  <span></span>
-                </h1>
-                <p>{props.data ? props.data.paragraph : "Loading"}</p>
-                <div className="button-container">
-                  <a
-                    href="#contact"
-                    className="btn-contact page-scroll"
-                  >
-                    Get in touch
-                  </a>
-                  <a
-                    href="#services"
-                    className="btn-explore page-scroll"
-                  >
-                    Our Vision
-                  </a>
-                </div>
+          <div className="header-content">
+            <div className="header-top-left">
+              <div className="top-title">Intelligent Solutions for Enterprise Knowledge</div>
+            </div>
+            <div className="header-bottom-right">
+              <p>{props.data ? props.data.paragraph : "Loading"}</p>
+              <div className="button-container">
+                <a
+                  href="#contact"
+                  className="btn-contact page-scroll"
+                >
+                  Get in touch
+                </a>
+                <a
+                  href="#services"
+                  className="btn-explore page-scroll"
+                >
+                  Our Vision
+                </a>
               </div>
+            </div>
+            <div className="header-bottom-left">
+              <a
+                href="https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Artikel/Innovation/igp.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bmwe-badge"
+              >
+                <span className="bmwe-text">Trusted by the BMWE</span>
+                <img
+                  src="img/bmwe_logo.png"
+                  alt="Bundesministerium für Wirtschaft und Energie"
+                  className="bmwe-logo"
+                />
+              </a>
             </div>
           </div>
         </div>
